@@ -6,4 +6,11 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
+    = render "header"
     = yield
+  
+  %script.template#html-embedded{type: 'text'}    
+    %h1
+      Hi, I'm a template YO
+    %h2
+      That lives inside HTML document

@@ -1,3 +1,5 @@
+require 'pry'
+
 def partial(name, args = {}, dir = 'app/assets/templates/')
   require 'ostruct'
   namespace = OpenStruct.new(args)
@@ -18,10 +20,10 @@ def load_templates(object, dir = 'app/assets/templates/')
     puts line
     result += line
   end
-  binding.pry
   result  
 end
 
+private
 
 def render_template(file_name)
   extention = file_name.split(".").last
